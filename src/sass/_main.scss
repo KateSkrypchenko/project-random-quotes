@@ -1,0 +1,66 @@
+.container {
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.quotes {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  border: 10px solid #fbeecd;
+  text-align: center;
+  background-color: #fff9e8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.quote {
+  font-family: 'Satisfy', cursive;
+  font-size: 15px;
+  color: #737373;
+
+  @media screen and (min-width: 480px) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 25px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 35px;
+  }
+}
+
+.author {
+  font-size: 15px;
+  color: #979797;
+
+  @media screen and (min-width: 480px) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 25px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 35px;
+  }
+}
+
+.quotes img {
+  position: absolute;
+  bottom: 15;
+  right: 10;
+}
+
+.btn-box {
+  text-align: center;
+}
