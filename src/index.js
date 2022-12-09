@@ -19,7 +19,7 @@ const options = {
 };
 
 refs.btnStop.disabled = true;
-const TIME_CHANGE = 3000;
+const TIME_CHANGE = 10000;
 let timerId = null;
 
 refs.btnStart.addEventListener('click', onClickButtonStart);

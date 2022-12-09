@@ -22,15 +22,15 @@
 
 .quote {
   font-family: 'Satisfy', cursive;
-  font-size: 15px;
+  font-size: 20px;
   color: #737373;
 
   @media screen and (min-width: 480px) {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   @media screen and (min-width: 768px) {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -55,15 +55,16 @@
 }
 
 .author {
-  font-size: 15px;
   color: #979797;
 
+  font-size: 20px;
+
   @media screen and (min-width: 480px) {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   @media screen and (min-width: 768px) {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -79,4 +80,12 @@
 
 .btn-box {
   text-align: center;
+}
+
+.btn-start {
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 425px) {
+    margin-bottom: 0;
+  }
 }
