@@ -28,6 +28,7 @@ refs.btnStop.addEventListener('click', onClickButtonStop);
 function onClickButtonStart() {
   addRemoveClass();
   toggleDisableButton(true, false);
+  onStartChange()
   timerId = setInterval(onStartChange, TIME_CHANGE);
 }
 
