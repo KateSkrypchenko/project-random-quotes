@@ -10,14 +10,6 @@ const refs = {
   btnStop: document.querySelector('.btn-stop'),
 };
 
-const options = {
-  method: 'GET',
-  headers: {
-    'X-RapidAPI-Key': '	39f449cf9dfd61b601c9d47d4004fe0d',
-    'X-RapidAPI-Host': '/favqs.com/api/qotd',
-  },
-};
-
 refs.btnStop.disabled = true;
 const TIME_CHANGE = 10000;
 let timerId = null;
@@ -28,7 +20,7 @@ refs.btnStop.addEventListener('click', onClickButtonStop);
 function onClickButtonStart() {
   addRemoveClass();
   toggleDisableButton(true, false);
-  onStartChange()
+  onStartChange();
   timerId = setInterval(onStartChange, TIME_CHANGE);
 }
 
@@ -47,7 +39,7 @@ async function createQuotes() {
   try {
     const fetch = await getQuotes();
     refs.author.textContent = `- ${fetch.author}`;
-    refs.quote.textContent = `"${fetch.body}"`;
+    refs.quote.textContent = `"${fetch.content}"`;
   } catch (error) {
     console.log(error);
   }
@@ -55,9 +47,9 @@ async function createQuotes() {
 
 async function getQuotes() {
   try {
-    const URL = `https://favqs.com/api/qotd`;
-    const response = await axios.get(URL, options);
-    return response.data.quote;
+    const URL = `https://api.quotable.io/random`;
+    const response = await axios.get(URL);
+    return response.data;
   } catch (error) {
     throw new Error(error);
   }
